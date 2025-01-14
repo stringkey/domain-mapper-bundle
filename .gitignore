@@ -1,3 +1,5 @@
+#editors
+.idea
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -50,3 +52,4 @@
 
 # Embedded web-server pid file
 /.web-server-pid
+/composer.lock

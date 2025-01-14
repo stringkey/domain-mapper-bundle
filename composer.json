@@ -1,0 +1,31 @@
+{
+    "name": "stringkey/domain-mapper-bundle",
+    "description": "Map external data and resources to your domain with smart contextual entity references",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Stringkey\\MapperBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stringkey\\DomainMapperBundle\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Erik van de Laar (stringkey)"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/http-kernel": "7.3.x-dev"
+    },
+    "require": {
+        "symfony/uid": "^6.4|^7.0",
+        "symfony/console": "^6.4|^7.0",
+        "doctrine/orm": "^3",
+        "doctrine/dbal": "^3"
+    }
+}
