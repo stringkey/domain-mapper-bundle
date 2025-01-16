@@ -8,7 +8,7 @@ use Symfony\Component\Uid\Uuid;
 
 interface MappableEntityInterface
 {
-    public function getId(): Uuid|int;
+    public function getId(): Uuid|int|null;
 
     /**
      * Returns a human understandable string representation, identifying the instance of the entity
