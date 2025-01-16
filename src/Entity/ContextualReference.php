@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Entity;
+namespace Stringkey\MapperBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Stringkey\MapperBundle\Repository\ContextualReferenceRepository;
 use Stringkey\MetadataCoreBundle\Entity\Context;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;

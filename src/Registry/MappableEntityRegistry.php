@@ -1,15 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Stringkey\MapperBundle\Registry;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\ClassMetadata;
-use Stringkey\MapperBundle\Entity\MappableEntity;
 use Stringkey\MapperBundle\Interface\MappableEntityInterface;
 
 class MappableEntityRegistry
 {
-    /** @var MappableEntityInterface[] */
+    /**
+     * @var $mappableEntities iterable
+     */
     private iterable $mappableEntities = [];
 
     private bool $isCached = false;
@@ -61,6 +64,6 @@ class MappableEntityRegistry
 
     public function getOptions(): array
     {
-        return array_flip($this->mappableEntities);
+        return array_flip($this->getEntities());
     }
 }
