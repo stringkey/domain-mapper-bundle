@@ -6,15 +6,15 @@ namespace Stringkey\MapperBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
-use Stringkey\EntityMapperBundle\Exception\MappableEntityNotFoundException;
+use Stringkey\MapperBundle\Exception\MappableEntityNotFoundException;
 use Stringkey\MapperBundle\Interface\MappableEntityInterface;
 use Stringkey\MapperBundle\Repository\MappableEntityRepository;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;
 
 #[ORM\Table(name: 'mappable_entity')]
-#[ORM\Entity(repositoryClass: MappableEntityRepository::class, readonly: true)]
-class MappableEntity
+#[ORM\Entity(repositoryClass: MappableEntityRepository::class)]
+final class MappableEntity
 {
     #[ORM\Id]
     #[ORM\Column(type: UuidType::NAME, unique: true)]

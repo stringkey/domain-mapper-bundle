@@ -34,7 +34,7 @@ class MapperService
          */
         foreach ($entitiesToAdd as $fullyQualifiedClassName => $name) {
             $mappableEntity = new MappableEntity();
-            $mappableEntity->setFullyQualifiedClassName($fullyQualifiedClassName);
+            $mappableEntity->setFqcn($fullyQualifiedClassName);
             $mappableEntity->setName($name);
 
             $this->entityManager->persist($mappableEntity);

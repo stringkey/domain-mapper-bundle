@@ -39,7 +39,7 @@ class MappableEntityRepository extends ServiceEntityRepository
     public function findAll(): array
     {
         $queryBuilder = $this->getQueryBuilder();
-        $queryBuilder->indexBy(self::ALIAS, self::ALIAS.'.fullyQualifiedClassName');
+        $queryBuilder->indexBy(self::ALIAS, self::ALIAS.'.fqcn');
 
         return $queryBuilder->getQuery()->getResult();
     }

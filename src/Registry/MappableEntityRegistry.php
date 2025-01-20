@@ -47,7 +47,7 @@ class MappableEntityRegistry
             $className = $classMetadata->getName();
 
             if ((is_subclass_of($className, MappableEntityInterface::class, true))) {
-                $this->mappableEntities[$className] = $className::getGroupName();
+                $this->mappableEntities[$className] = $className::getEntityName();
             }
         }
 
