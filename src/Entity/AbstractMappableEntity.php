@@ -2,7 +2,7 @@
 
 namespace Stringkey\MapperBundle\Entity;
 
-use Stringkey\EntityMapperBundle\Interface\MappableEntityInterface;
+use Stringkey\MapperBundle\Interface\MappableEntityInterface;
 use Symfony\Component\Uid\Uuid;
 
 abstract class AbstractMappableEntity implements MappableEntityInterface
