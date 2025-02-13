@@ -14,7 +14,10 @@ use Symfony\Component\Uid\Uuid;
 
 #[ORM\Table(name: 'mappable_entity')]
 #[ORM\Entity(repositoryClass: MappableEntityRepository::class)]
-final class MappableEntity
+// todo: Use lazy proxy to be able to use final entities
+//       https://symfony.com/doc/current/service_container/lazy_services.html#interface-proxifying
+//       error: Cannot generate lazy ghost: class "Stringkey\MapperBundle\Entity\MappableEntity" is final.
+/* final */ class MappableEntity
 {
     #[ORM\Id]
     #[ORM\Column(type: UuidType::NAME, unique: true)]
