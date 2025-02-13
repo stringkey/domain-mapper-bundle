@@ -14,5 +14,5 @@ abstract class AbstractMappableEntity implements MappableEntityInterface
     public static function getEntityName(): string
     {
         return get_called_class();
-    }q
+    }
 }
