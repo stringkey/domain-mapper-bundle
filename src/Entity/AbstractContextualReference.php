@@ -20,7 +20,7 @@ abstract class AbstractContextualReference
     private ?Uuid $id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\JoinColumn(nullable: false, onDelete: "CASCADE")]
     private ?Context $context = null;
 
     #[ORM\Column(length: 255)]
