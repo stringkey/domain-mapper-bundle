@@ -15,6 +15,8 @@ trait ExternalReferenceTrait
 
     public function setExternalReference(string $externalReference): static
     {
-        return $this->externalReference = $externalReference;
+        $this->externalReference = $externalReference;
+
+        return $this;
     }
 }
